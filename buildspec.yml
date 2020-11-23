@@ -5,5 +5,5 @@ phases:
       python: 3.8
   pre_build:
     commands:
-      - pip install -r requirements.txt
-      - python app_test.py
+      - pip install -r requirements.txt # installing the python packages required by the build
+      - python app_test.py # The test application
