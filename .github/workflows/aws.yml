@@ -76,6 +76,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: kibi-sample-app
-        cluster: kibi-cluster
+        service: Kibi-Service
+        cluster: Kibi-Cluster
         wait-for-service-stability: true
