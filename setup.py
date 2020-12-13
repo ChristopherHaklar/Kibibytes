@@ -7,7 +7,7 @@ with open("README.md") as fp:
 
 setuptools.setup(
     name="kibibytes",
-    version="0.0.1",
+    version="0.0.1", 
 
     description="An empty CDK Python app",
     long_description=long_description,
