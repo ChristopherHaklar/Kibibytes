@@ -9,7 +9,5 @@ COPY replaceIP.py ./
 COPY idtable.sql ./
 COPY newid.php ./
 # Run application
-CMD apt update
-CMD apt install apache2 -y
-CMD mv idtable.php /var/www/html
+CMD [ "/bin/sh", "apt update && apt install apache2 -y && mv idtable.php /var/www/html" ]
 # CMD python3 replaceIP.py

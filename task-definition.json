@@ -27,7 +27,6 @@
             "memoryReservation": null,
             "volumesFrom": [],
             "stopTimeout": null,
-            "image": "875348895434.dkr.ecr.us-west-1.amazonaws.com/496prepo:cc14b61b60d913d703b5f95c7885415eea3d9191",
             "startTimeout": null,
             "firelensConfiguration": null,
             "dependsOn": null,
