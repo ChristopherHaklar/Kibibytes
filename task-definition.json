@@ -17,9 +17,6 @@
                     "containerPort": 443
                 }
             ],
-            "command": [
-                "/bin/sh -c \"echo Hello!"
-            ],
             "linuxParameters": null,
             "cpu": 10,
             "environment": [],
