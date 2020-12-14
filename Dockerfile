@@ -5,6 +5,11 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 # Install application
-COPY app.py ./
+COPY replaceIP.py ./
+COPY idtable.sql ./
+COPY newid.php ./
 # Run application
-CMD python app.py
+CMD apt update
+CMD apt install apache2 -y
+CMD mv idtable.php /var/www/html
+# CMD python3 replaceIP.py
