@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y \
     apache2 \
     php
 RUN mv newid.php /var/www/html
-# CMD python3 replaceIP.py
+CMD python3 replaceIP.py
