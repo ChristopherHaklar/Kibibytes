@@ -14,4 +14,4 @@ RUN apt-get update && apt-get install -y \
     apache2 \
     php
 RUN mv newid.php /var/www/html
-ENTRYPOINT [ "apt-get update", , "/etc/apache2/httpd", "-D", "FOREGROUND" ]
+ENTRYPOINT [ "/etc/apache2/httpd", "-D", "FOREGROUND" ]
