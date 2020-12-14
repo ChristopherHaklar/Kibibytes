@@ -6,10 +6,6 @@
             "dnsSearchDomains": null,
             "environmentFiles": null,
             "logConfiguration": null,
-            "entryPoint": [
-                "sh",
-                "-c"
-            ],
             "portMappings": [
                 {
                     "hostPort": 443,
