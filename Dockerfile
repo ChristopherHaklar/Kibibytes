@@ -8,9 +8,8 @@ WORKDIR /usr/src/app
 # Install application
 # RUN yum install -y httpd php php-mysqlnd
 RUN apt update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata && apt install -y apache2 php libapache2-mod-php php-mysql
-EXPOSE 443
-COPY httpd.conf /etc/httpd/conf
 COPY replaceIP.py ./
 COPY idtable.sql ./
 COPY newid.php /var/www/html
+EXPOSE 80
 ENTRYPOINT [ "/usr/sbin/apache2ctl", "-D", "FOREGROUND" ]
