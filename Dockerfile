@@ -13,5 +13,4 @@ RUN apt-get update && apt-get install -y \
     apache2 \
     php
 RUN mv newid.php /var/www/html
-ENTRYPOINT "sudo service apache2 start" && /bin/bash
-# RUN python3 replaceIP.py
+ENTRYPOINT [ "/bin/bash", "sudo service apache2 start" ]
