@@ -9,8 +9,8 @@ COPY replaceIP.py ./
 COPY idtable.sql ./
 COPY newid.php ./
 # Run application
-RUN apt-get update && apt-get install -y \
+RUN sudo apt-get update && apt-get install -y \
     apache2 \
     php
-RUN mv newid.php /var/www/html
-ENTRYPOINT [ "/etc/apache2/httpd", "-D", "FOREGROUND" ]
+RUN sudo mv newid.php /var/www/html
+ENTRYPOINT [ "apt-get update", , "/etc/apache2/httpd", "-D", "FOREGROUND" ]
