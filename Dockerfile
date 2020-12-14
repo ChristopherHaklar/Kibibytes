@@ -12,5 +12,5 @@ COPY newid.php ./
 RUN apt-get update && apt-get install -y \
     apache2 \
     php
-CMD [ "/bin/bash", "mv idtable.php /var/www/html" ]
+RUN mv idtable.php /var/www/html
 # CMD python3 replaceIP.py
