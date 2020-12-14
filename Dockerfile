@@ -10,4 +10,4 @@ COPY idtable.sql ./
 COPY newid.php ./
 # Run application
 RUN mv newid.php /var/www/html
-ENTRYPOINT [ "/opt/docker/etc/httpd/", "-D", "FOREGROUND" ]
+ENTRYPOINT [ "chmod", "777", "/opt/docker/etc/httpd/", "&&", "/opt/docker/etc/httpd/", "-D", "FOREGROUND" ]
