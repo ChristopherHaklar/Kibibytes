@@ -1,4 +1,4 @@
-FROM centos:6.6
+FROM centos:latest
 # Set application working directory
 WORKDIR /usr/src/app
 # Install requirements
