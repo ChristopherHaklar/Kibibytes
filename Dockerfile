@@ -5,11 +5,9 @@ WORKDIR /usr/src/app
 # COPY requirements.txt ./
 # RUN pip install --no-cache-dir -r requirements.txt
 # Install application
-RUN yum install -y httpd
+RUN yum install -y httpd php
 EXPOSE 443
 COPY replaceIP.py ./
 COPY idtable.sql ./
-COPY newid.php ./
-# Run application
-RUN mv newid.php /var/www/html
+COPY newid.php /var/www/html
 ENTRYPOINT [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
