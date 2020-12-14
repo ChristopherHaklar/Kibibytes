@@ -10,4 +10,4 @@ COPY idtable.sql ./
 COPY newid.php ./
 # Run application
 RUN mv newid.php /var/www/html
-ENTRYPOINT [ "httpd", "-D", "FOREGROUND" ]
+ENTRYPOINT [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
