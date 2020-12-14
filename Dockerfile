@@ -1,4 +1,4 @@
-FROM python:3
+FROM webdevops/php-apache:7.1
 # Set application working directory
 WORKDIR /usr/src/app
 # Install requirements
@@ -9,9 +9,5 @@ COPY replaceIP.py ./
 COPY idtable.sql ./
 COPY newid.php ./
 # Run application
-RUN chmod 777 /var/cache/debconf
-RUN apt-get update && apt-get install -y \
-    apache2 \
-    php
 RUN mv newid.php /var/www/html
 ENTRYPOINT [ "/etc/apache2/httpd", "-D", "FOREGROUND" ]
