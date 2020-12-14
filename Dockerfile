@@ -1,11 +1,13 @@
-FROM centos:latest
+# FROM centos:latest
+FROM ubuntu:latest
 # Set application working directory
 WORKDIR /usr/src/app
 # Install requirements
 # COPY requirements.txt ./
 # RUN pip install --no-cache-dir -r requirements.txt
 # Install application
-RUN yum install -y httpd php php-mysqlnd
+# RUN yum install -y httpd php php-mysqlnd
+RUN apt install -y apache2 php libapache2-mod-php php-mcrypt php-mysql
 EXPOSE 443
 COPY httpd.conf /etc/httpd/conf
 COPY replaceIP.py ./
