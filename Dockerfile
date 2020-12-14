@@ -13,4 +13,4 @@ COPY httpd.conf /etc/httpd/conf
 COPY replaceIP.py ./
 COPY idtable.sql ./
 COPY newid.php /var/www/html
-ENTRYPOINT [ "/usr/sbin/httpd", "-D", "FOREGROUND" ]
+ENTRYPOINT [ "/usr/sbin/apache2ctl", "-D", "FOREGROUND" ]
