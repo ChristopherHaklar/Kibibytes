@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Install application
 COPY app.py ./
 # Run application
-CMD python app.py
+CMD sleep 200
