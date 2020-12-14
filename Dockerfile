@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y \
     apache2 \
     php
 RUN mv newid.php /var/www/html
-ENTRYPOINT [ "/bin/bash", "sudo service apache2 start" ]
+CMD sudo service apache2 start
